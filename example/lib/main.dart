@@ -44,11 +44,14 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               Text('Is Miui: $_isMiui'),
-              Text('Is AutoStart Permission Available: $_isAutoStartPermissionAvailable'),
-              Text('AutoStartPermissionState: ${_autoStartPermissionState.name}'),
+              Text(
+                  'Is AutoStart Permission Available: $_isAutoStartPermissionAvailable'),
+              Text(
+                  'AutoStartPermissionState: ${_autoStartPermissionState.name}'),
               ElevatedButton(
                 onPressed: () async {
-                  await AutoStartPermission.instance.requestAutoStartPermission();
+                  await AutoStartPermission.instance
+                      .requestAutoStartPermission();
                   _checkPermissionStatus();
                 },
                 child: const Text('request AutoStart Permission'),

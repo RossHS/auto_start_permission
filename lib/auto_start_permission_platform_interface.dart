@@ -7,7 +7,8 @@ abstract class AutoStartPermissionPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static AutoStartPermissionPlatform _instance = MethodChannelAutoStartPermission();
+  static AutoStartPermissionPlatform _instance =
+      MethodChannelAutoStartPermission();
 
   /// The default instance of [AutoStartPermissionPlatform] to use.
   ///
@@ -29,11 +30,14 @@ abstract class AutoStartPermissionPlatform extends PlatformInterface {
   }
 
   Future<bool?> isAutoStartPermissionAvailable() {
-    throw UnimplementedError('isAutoStartPermissionAvailable() has not been implemented.');
+    throw UnimplementedError(
+        'isAutoStartPermissionAvailable() has not been implemented.');
   }
 
-  Future<void> requestAutoStartPermission({bool open = true, bool newTask = true}) {
-    throw UnimplementedError('requestAutoStartPermission() has not been implemented.');
+  Future<void> requestAutoStartPermission(
+      {bool open = true, bool newTask = true}) {
+    throw UnimplementedError(
+        'requestAutoStartPermission() has not been implemented.');
   }
 
   Future<String?> checkAutoStartState() {

@@ -14,13 +14,16 @@ class MethodChannelAutoStartPermission extends AutoStartPermissionPlatform {
   }
 
   @override
-  Future<bool?> isAutoStartPermissionAvailable() => methodChannel.invokeMethod('isAutoStartPermissionAvailable');
+  Future<bool?> isAutoStartPermissionAvailable() =>
+      methodChannel.invokeMethod('isAutoStartPermissionAvailable');
 
   @override
-  Future<String?> checkAutoStartState() => methodChannel.invokeMethod('checkAutoStartPermissionState');
+  Future<String?> checkAutoStartState() =>
+      methodChannel.invokeMethod('checkAutoStartPermissionState');
 
   @override
-  Future<void> requestAutoStartPermission({bool open = false, bool newTask = false}) {
+  Future<void> requestAutoStartPermission(
+      {bool open = false, bool newTask = false}) {
     return methodChannel.invokeMethod(
       'requestAutoStartPermission',
       {

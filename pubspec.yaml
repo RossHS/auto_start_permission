@@ -1,5 +1,6 @@
 name: auto_start_permission
 description: "Flutter plugin for setting up auto start permission - ANDROID ONLY"
+homepage: https://github.com/RossHS/auto_start_permission
 version: 1.0.0
 
 environment:

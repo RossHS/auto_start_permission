@@ -9,7 +9,8 @@ class AutoStartPermission {
 
   static AutoStartPermission get instance => _instance;
 
-  static AutoStartPermissionPlatform get _platform => AutoStartPermissionPlatform.instance;
+  static AutoStartPermissionPlatform get _platform =>
+      AutoStartPermissionPlatform.instance;
 
   /// Check if this is a MIUI device or not
   Future<bool> isOnMiui() async {

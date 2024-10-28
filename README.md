@@ -23,7 +23,7 @@ To use this plugin, add `auto_start_permission` as a [dependency in your pubspec
 
 ```yaml
 dependencies:
-  auto_start_permission: ^1.0.0
+  auto_start_permission: ^1.0.1
 ```
 
 

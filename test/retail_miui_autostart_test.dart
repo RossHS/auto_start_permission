@@ -4,7 +4,9 @@ import 'package:auto_start_permission/auto_start_permission_platform_interface.d
 import 'package:flutter_test/flutter_test.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-class MockAutoStartPermissionPlatform with MockPlatformInterfaceMixin implements AutoStartPermissionPlatform {
+class MockAutoStartPermissionPlatform
+    with MockPlatformInterfaceMixin
+    implements AutoStartPermissionPlatform {
   @override
   Future<bool?> isAutoStartPermissionAvailable() async => true;
 
@@ -21,23 +23,27 @@ class MockAutoStartPermissionPlatform with MockPlatformInterfaceMixin implements
   }
 
   @override
-  Future<void> requestAutoStartPermission({bool open = false, bool newTask = false}) {
+  Future<void> requestAutoStartPermission(
+      {bool open = false, bool newTask = false}) {
     // TODO: implement requestAutoStartPermission
     throw UnimplementedError();
   }
 }
 
 void main() {
-  final AutoStartPermissionPlatform initialPlatform = AutoStartPermissionPlatform.instance;
+  final AutoStartPermissionPlatform initialPlatform =
+      AutoStartPermissionPlatform.instance;
 
   test('$MethodChannelAutoStartPermission is the default instance', () {
     expect(initialPlatform, isInstanceOf<MethodChannelAutoStartPermission>());
   });
 
   test('getPlatformVersion', () async {
-    MockAutoStartPermissionPlatform fakePlatform = MockAutoStartPermissionPlatform();
+    MockAutoStartPermissionPlatform fakePlatform =
+        MockAutoStartPermissionPlatform();
     AutoStartPermissionPlatform.instance = fakePlatform;
 
-    expect(await AutoStartPermission.instance.isAutoStartPermissionAvailable(), true);
+    expect(await AutoStartPermission.instance.isAutoStartPermissionAvailable(),
+        true);
   });
 }
